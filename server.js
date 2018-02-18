@@ -6,7 +6,7 @@ const cors = require('cors');
 //const passport = require('passport');
 const app = express();
 
-const dbConnectionString = "mongodb://heroku_w6z35ts2:9fa0j0snn1ebm5dlddf8rij2as@ds139138.mlab.com:39138/heroku_w6z35ts2";
+const dbConnectionString = "mongodb://heroku_th3wptmn:q2pftd693asrqj56l5uuppn9mf@ds239988.mlab.com:39988/heroku_th3wptmn";
 mongoose.connect(dbConnectionString)
 mongoose.connection.on('connected', () => {
   console.log('Connected to database '+ dbConnectionString);
