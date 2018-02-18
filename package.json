@@ -1,0 +1,28 @@
+{
+  "name": "web_eng_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fadil",
+  "license": "MIT",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.13",
+    "angular": "^1.6.9",
+    "angular-jwt": "^0.1.9",
+    "angular-messages": "^1.6.8",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.9",
+    "ngstorage": "^0.3.11",
+    "popper.js": "^1.12.9"
+  }
+}

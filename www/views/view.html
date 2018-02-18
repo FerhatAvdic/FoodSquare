@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="card-columns mt-3">
+        <div class="card" ng-repeat="item in vm.items">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.text}}</p>
+                <a class="btn btn-info btn-block" href="" ui-sref="recipeItem({id: item._id})">Read</a>
+            </div>
+        </div>
+    </div>
+</div>

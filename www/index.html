@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FoodSquare</title>
+
+
+    <link rel="stylesheet" href="./www/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="./www/style.css">
+
+
+
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/popper/dist/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/angular/angular.min.js"></script> 
+    <script src="./node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="./node_modules/ngstorage/ngStorage.min.js"></script>
+    <script src="./node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="./node_modules/angular-jwt/dist/angular-jwt.min.js"></script>
+
+    <script src="./node_modules/bootstrap"></script> 
+
+
+    <script src="./www/app.js"></script>
+    <script src="./www/services/authService.js"></script>
+    <script src="./www/services/dataService.js"></script>
+    <script src="./www/controllers/indexController.js"></script>    
+    <script src="./www/controllers/viewController.js"></script>
+    <script src="./www/controllers/loginController.js"></script>
+    <script src="./www/controllers/signupController.js"></script>
+    <script src="./www/controllers/myRecipesController.js"></script>
+    <script src="./www/controllers/newRecipeController.js"></script>
+    <script src="./www/controllers/editRecipeController.js"></script>
+    <script src="./www/controllers/recipeItemController.js"></script>
+
+
+</head>
+<body ng-app="app" ng-controller="indexController as vm">
+
+        <nav class="fixed-nav navbar navbar-expand-lg navbar-light bg-light ">
+                <a class="navbar-brand" href="#"><strong>FoodSquare</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" ui-sref="view" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item" ng-if="!vm.user_id">
+                        <a class="nav-link" href="" ui-sref="login">Login</a>
+                    </li>
+                    <li class="nav-item" ng-if="!vm.user_id">
+                        <a class="nav-link" href="" ui-sref="signup">Signup</a>
+                    </li>
+                    <li class="nav-item" ng-if="vm.user_id">
+                        <a class="nav-link" href="" ui-sref="myrecipes">My Recipes</a>
+                    </li>
+                    <li class="nav-item" ng-if="vm.user_id">
+                      <a class="nav-link" href="" ng-click="vm.logout()">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+
+    <ui-view class="h-100"></ui-view>
+</body>
+</html>

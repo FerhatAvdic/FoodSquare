@@ -1,0 +1,20 @@
+<div class="container h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-5 col-12">
+            <form class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter title" ng-model="vm.newItem.title">
+                    </div>
+                    <div class="form-group">
+                        <label for="body">Body Text</label>
+                        <textarea class="form-control" id="body" rows="5" placeholder="Enter body text" ng-model="vm.newItem.text"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success" ng-click="vm.addItem()">Submit</button>
+                    <button type="button" class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12">
+            <button type="button" class="btn btn-warning" ui-sref="newRecipe">New Recipe</button>
+        </div>
+    </div>
+    <div class="card-columns mt-3">
+        <div class="card" ng-repeat="item in vm.items">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.text}}</p>
+                <div class="btn-group w-100 d-flex justify-content-center" role="group" aria-label="item-options">
+                    <a href="" class="btn btn-success" ui-sref="recipeItem({id: item._id})">Read</a>
+                    <a href="" class="btn btn-primary" ui-sref="editRecipe({id: item._id})">Edit</a>
+                    <a href="" class="btn btn-danger" ng-click="vm.deleteItem(item._id)">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
